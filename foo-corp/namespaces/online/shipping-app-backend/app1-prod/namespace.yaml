@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: shipping-prod
+  name: app1-prod
   labels:
     env: prod
   annotations:
