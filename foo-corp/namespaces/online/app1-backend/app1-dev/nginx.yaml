@@ -10,8 +10,10 @@ spec:
     image: nginx
     resources:
       limits:
+        cpu: "200m"
         memory: "200m"
       requests:
+        cpu:    "100m"
         memory: "100m"
     ports:
     - containerPort: 80
