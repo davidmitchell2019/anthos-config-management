@@ -29,12 +29,21 @@ metadata:
 spec:
   # clusterName is required and must be unique among all managed clusters
   clusterName: user1
+  #This will install Gatekeeper policy controller (not sure if its full features)
+  policyController:
+    enabled: true
   git:
     syncRepo: https://github.com/davidmitchell2019/anthos-config-management.git
     syncBranch: master
     secretType: none
   # which directory to sync with ACM  
     policyDir: "foo-corp"
+
+## Gatekeeper can also be deployed
+
+kubectl apply -f https://raw.githubusercontent.com/open-policy-agent/gatekeeper/master/deploy/gatekeeper.yaml
+kubectl get crd | grep -i constraint
+kubectl get constrainttemplates
 
 ## Check config management deployment
 
