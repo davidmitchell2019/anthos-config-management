@@ -20,24 +20,24 @@ https://cloud.google.com/anthos-config-management/docs/how-to/installing#git-cre
 
 ## Configure the operator:
 
-# config-management.yaml
+#config-management.yaml
 
-# apiVersion: configmanagement.gke.io/v1
-# kind: ConfigManagement
-# metadata:
-#   name: config-management
-# spec:
-# clusterName is required and must be unique among all managed clusters
-#   clusterName: user1
+### apiVersion: configmanagement.gke.io/v1
+### kind: ConfigManagement
+### metadata:
+###   name: config-management
+### spec:
+### clusterName is required and must be unique among all managed clusters
+###   clusterName: user1
 #This will install Gatekeeper policy controller (not sure if its full features)
-#   policyController:
-#     enabled: true
-#   git:
-#     syncRepo: https://github.com/davidmitchell2019/anthos-config-management.git
-#     syncBranch: master
-#     secretType: none
-# which directory to sync with ACM  
-#     policyDir: "foo-corp"
+###   policyController:
+###     enabled: true
+###   git:
+###     syncRepo: https://github.com/davidmitchell2019/anthos-config-management.git
+###     syncBranch: master
+###     secretType: none
+#which directory to sync with ACM  
+###     policyDir: "foo-corp"
 
 ## Gatekeeper can also be deployed
 
