@@ -1,0 +1,16 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: allow-tcp-80
+  namespace: app1-dev
+  spec:
+    selector: color == 'red'
+    ingress:
+    - action: Allow
+      protocol: TCP
+      source:
+        selector: color == 'blue'
+        namespaceSelector: shape == 'circle'
+      destination:
+        ports:
+        - 80
