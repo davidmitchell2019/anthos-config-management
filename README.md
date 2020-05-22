@@ -46,3 +46,7 @@ chmod 400 nomos && mv nomos /usr/local/bin
 ## Check the status of your sync: (useful for troubleshooting syncs)
 
 nomos status
+
+## In this example I am not installing the policy controller libraries/templates, and opting to install them one at a time, this can be seen in the config-management.yaml file example, to see the status of installed constraint templates:
+
+kubectl get constrainttemplates
