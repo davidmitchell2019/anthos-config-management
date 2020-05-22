@@ -8,6 +8,7 @@ spec:
   #This will install Gatekeeper policy controller (not sure if its full features)
   policyController:
     enabled: true
+    templateLibraryInstalled: false
   git:
     syncRepo: https://github.com/davidmitchell2019/anthos-config-management.git
     syncBranch: master
