@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx-privilege-escalation
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
