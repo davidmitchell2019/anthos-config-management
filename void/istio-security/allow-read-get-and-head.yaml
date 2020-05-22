@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-read
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: products
+  action: ALLOW
+  rules:
+  - to:
+    - operation:
+         methods: ["GET", "HEAD"]

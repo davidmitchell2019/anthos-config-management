@@ -1,0 +1,17 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: enable-jwt-for-admin
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: products
+  action: DENY
+  rules:
+  - to:
+    - operation:
+        paths: ["/admin"]
+    from:
+    - source:
+        notRequestPrincipals: ["*"]

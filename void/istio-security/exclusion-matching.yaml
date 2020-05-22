@@ -1,0 +1,17 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: disable-jwt-for-healthz
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: products
+  action: ALLOW
+  rules:
+  - to:
+    - operation:
+        notPaths: ["/healthz"]
+    from:
+    - source:
+        requestPrincipals: ["*"]
