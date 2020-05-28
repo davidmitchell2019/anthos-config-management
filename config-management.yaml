@@ -11,7 +11,7 @@ spec:
     templateLibraryInstalled: false
   git:
     syncRepo: https://github.com/davidmitchell2019/anthos-config-management.git
-    syncBranch: master
+    syncBranch: stln-dev
     secretType: none
   # which directory to sync with ACM
     policyDir: "foo-corp"
