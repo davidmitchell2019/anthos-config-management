@@ -1,1 +1,1 @@
-some file that does nothing
+some file that does nothing except retains the necessary folder
