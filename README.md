@@ -49,4 +49,10 @@ nomos status
 
 ## In this example I am not installing the policy controller libraries/templates, and opting to install them one at a time, this can be seen in the config-management.yaml file example, to see the status of installed constraint templates:
 
-kubectl get constrainttemplates
+kubectl get constrainttemplates will show you the list of installed gatekeepr templates.
+
+kubectl api-resources will show you the list of all api resources and wether they are namespaced or not.
+
+The namespaced ones go in to your namespaced folders.
+
+The rest will go into the cluster folder.
